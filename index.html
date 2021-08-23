@@ -31,12 +31,22 @@
     <script>
 
         // Connect a the web3 provider
-        
+        console.log("Starting of the page");
         if (typeof web3 !== 'undefined') {
-            web3 = new Web3(web3.currentProvider);
+            web3 = new Web3(window.ethereum);
         } else {
-            web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/a61c441b7f924628a788e1b81ac1eca5"));
+            web3 = new Web3(new window.ethereum.HttpProvider("https://ropsten.infura.io/v3/a61c441b7f924628a788e1b81ac1eca5"));
         }
+
+
+        async function asyncCall() {
+            window.ethereum.enable(); // =========== RETURN UNDEFINED
+            console.log('calling');
+            const result = await ethereum.request({ method: 'eth_accounts' });
+            console.log(result);
+            // expected output: 'resolved'
+        }
+        asyncCall()
 
         // Set a default account
         web3.eth.defaultAccount = '0x0Aa2021c5472e7982E126289EE062410952CeA5A';
@@ -71,7 +81,7 @@
                 "stateMutability": "view",
                 "type": "function"
             }
-        ], '0x5492Dc914d23679d4C842dC10E3C95ECAB36Ce35');
+        ], '0x6554290fa8b8753Ebf5C9Fb732Fd42bFF737C31C');
 
         // Get the contract abi
         //var myMessage = RemixContract.at('0xcd67e37Db719260a64562cb8B90638cA088cB842');
