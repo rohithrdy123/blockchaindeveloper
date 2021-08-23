@@ -79,7 +79,7 @@
         console.log(RemixContract);
 
         $("#setMessageButton").click(function () {
-            RemixContract.methods.setMessage($("#userInput").val()).call().then(console.log);
+            RemixContract.methods.setMessage($("#userInput").val()).send({ from: '0x0Aa2021c5472e7982E126289EE062410952CeA5A'});
                 
             console.log($("#userInput").val());
         });
