@@ -1,0 +1,5 @@
+{
+    "solidity.defaultCompiler": "localFile",
+    "solidity.compileUsingRemoteVersion": "v0.4.24+commit.e67f0147",
+    "solidity.compileUsingLocalVersion": "c:\\Users\\ismai\\Udacity_blockchain\\Project_3_Ethereum_Dapp_for_Tracking_Items\\soljson-v0.4.24+commit.e67f0147.js"
+}
