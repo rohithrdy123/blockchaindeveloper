@@ -3,7 +3,7 @@ const infuraKey = "a61c441b7f924628a788e1b81ac1eca5";
 //
 //const fs = require('fs');
 //const mnemonic = fs.readFileSync(".secret").toString().trim();
-mnemonic = "minimum type couple head apology move slight gown film define series student"
+mnemonic = "Metamask seed"
 
 module.exports = {
   networks: {
